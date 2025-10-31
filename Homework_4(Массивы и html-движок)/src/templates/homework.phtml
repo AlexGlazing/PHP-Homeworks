@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/">Главная</a>
+    <a href="/about.php">О нас</a>
+    <a href="/homework.php">homework</a><br>
+    <section name ="Sentence1">
+        <h2>Задание №1</h2>
+        <div class="description">Подготовьте массив целых чисел (4, 5, 1, 4, 7, 8, 15, 6, 71, 45, 2)
+Сделайте функцию, которая по этому массиву вернет новый массив, в котором каждое значение
+будет заменено строкой "четное" или "не четное". ["четное", "не четное"...] evenOdd()
+Сделать через цикл
+*Сделать через array_map</div>
+        <p><strong>Массив: </strong> <?= print_r($arr,true)?></p>
+        <?php
+        print_r(array_map("evenOdd", $arr)); ?>
+    </section>
+    <section name = "Sentence2">
+        <h2>Задание №2</h2>
+        <div class="description">Разработайте функцию aggregationData() с объявленными типами аргументов и возвращаемого значения,
+принимающую в качестве аргумента массив целых чисел.
+$mas = [4, 5, 1, 4, 7, 8, 15, 6, 71, 45, 2];
+Результатом работы функции должен быть массив, содержащий три элемента:
+max — наибольшее число, min — наименьшее число, avg — среднее арифметическое всех чисел массива.
+не использовать цикл!</div>
+        <p><strong>Результат: </strong> <?= print_r(aggregationData($mas),true); ?></p>
+    </section>
+    <section name = "Sentence3">
+        <h2>Задание №3</h2>
+        <div class="description">Используя mt_rand, сгенерируйте массив размером 100 элементов так,
+ чтобы все элементы были в диапазоне от 1 до 200 УНИКАЛЬНЫЕ
+Используйте цикл.
+*Используйте только функции работы с массивами</div>
+        <p><strong>Результат: </strong> <?= print_r(generationRandomArray(),true); ?></p>
+    </section>
+    <section name = "Sentence4">
+        <h2>Задание №4</h2>
+        <div class="description">Дан массив $mas = [4, 5, 1, 4, 7, 8, 15, 6, 71, 45, 2]; сделайте алгоритм и найдите сумму между
+минимальным и максимальными значениями. Не используя готовые функции. Используя цикл.
+** Используйте один цикл, в один проход.</div>
+        <p><strong>Результат: </strong> <?= sumMaxMin() ?></p>
+    </section>
+    <h3>Работа с html
+Используя "движок" вынесите блок меню в отдельный подшаблон в components и подключите его через include
+* Все пункты ДЗ сделайте на движке на отдельных страницах.</h3>
+</body>
+</html>
